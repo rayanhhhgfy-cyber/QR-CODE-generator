@@ -80,17 +80,17 @@ export default function AnalyticsPage() {
   return (
     <div>
       <Header />
-      <div className="p-6 max-w-5xl mx-auto">
-        <div className="flex items-start gap-6 mb-6">
-          <div>
-            <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+      <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 mb-6">
+          <div className="min-w-0">
+            <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
               Analytics
             </h2>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 break-all">
               Real scan performance for QR code {id?.slice(0, 8)}...
             </p>
           </div>
-          <div className="flex items-start gap-3 ml-auto">
+          <div className="flex flex-wrap items-start gap-3 sm:ml-auto">
             <Button variant="secondary" size="sm" onClick={handleTestScan}>
               <Smartphone className="w-4 h-4" />
               Test Scan ({testScans})

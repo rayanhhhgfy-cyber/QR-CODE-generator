@@ -30,13 +30,13 @@ export function AnalyticsCharts({
   const deviceTotal = deviceBreakdown.reduce((a, b) => a + b.value, 0);
 
   return (
-    <div className="grid gap-6">
-      <Card>
+    <div className="grid gap-4 sm:gap-6 xl:grid-cols-2">
+      <Card className="xl:col-span-2">
         <CardHeader>
           <CardTitle>Scans Over Time (30 Days)</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="h-72">
+          <div className="h-64 sm:h-72">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={scansOverTime}>
                 <CartesianGrid
@@ -100,7 +100,7 @@ export function AnalyticsCharts({
                 </PieChart>
               </ResponsiveContainer>
             </div>
-            <div className="flex justify-center gap-4 mt-2">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-2">
               {deviceBreakdown.map((d) => (
                 <div key={d.name} className="flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-400">
                   <div

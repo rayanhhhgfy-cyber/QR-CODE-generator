@@ -52,9 +52,9 @@ export default function QRSettingsPage() {
   return (
     <div>
       <Header />
-      <div className="p-6 max-w-2xl mx-auto">
+      <div className="p-4 sm:p-6 lg:p-8 max-w-2xl mx-auto">
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+          <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
             QR Code Settings
           </h2>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
@@ -82,7 +82,7 @@ export default function QRSettingsPage() {
             </div>
 
             {!config.slug ? (
-              <Button onClick={handleCreateDynamic} disabled={!destUrl || syncing}>
+              <Button className="w-full sm:w-auto" onClick={handleCreateDynamic} disabled={!destUrl || syncing}>
                 {syncing ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
                 ) : (
@@ -92,7 +92,7 @@ export default function QRSettingsPage() {
               </Button>
             ) : (
               <div className="space-y-3">
-                <Button onClick={handleUpdate} disabled={!destUrl || syncing}>
+                <Button className="w-full sm:w-auto" onClick={handleUpdate} disabled={!destUrl || syncing}>
                   {syncing ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
                   ) : (
@@ -104,7 +104,7 @@ export default function QRSettingsPage() {
                 {redirectUrl && (
                   <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
                     <Label>QR Redirect URL</Label>
-                    <div className="flex items-center gap-2 mt-1">
+                    <div className="flex flex-wrap items-center gap-2 mt-1">
                       <code className="flex-1 text-xs text-zinc-600 dark:text-zinc-400 break-all">
                         {redirectUrl}
                       </code>

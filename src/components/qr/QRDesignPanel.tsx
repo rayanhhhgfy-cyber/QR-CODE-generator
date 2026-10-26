@@ -26,7 +26,7 @@ export function QRDesignPanel() {
     <div className="space-y-5">
       <div className="space-y-2">
         <Label>Data Pixel Shape</Label>
-        <div className="grid grid-cols-5 gap-1.5">
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-1.5">
           {shapeOptions.map((opt) => (
             <button
               key={opt.value}

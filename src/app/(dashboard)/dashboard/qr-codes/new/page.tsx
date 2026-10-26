@@ -59,13 +59,13 @@ export default function NewQRCodePage() {
   ];
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col lg:h-full">
       <Header />
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
-        <div className="flex-1 overflow-y-auto p-4 lg:p-6 border-r border-zinc-200 dark:border-zinc-800">
-          <div className="max-w-lg mx-auto">
+      <div className="flex-1 flex flex-col lg:flex-row lg:overflow-hidden">
+        <div className="order-2 lg:order-1 flex-1 lg:overflow-y-auto p-4 sm:p-6 lg:p-8 lg:border-r border-zinc-200 dark:border-zinc-800 min-w-0">
+          <div className="max-w-xl mx-auto">
             <div className="mb-6">
-              <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+              <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
                 QR Code Builder
               </h2>
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
@@ -76,7 +76,7 @@ export default function NewQRCodePage() {
           </div>
         </div>
 
-        <div className="w-full lg:w-[400px] xl:w-[480px] shrink-0 overflow-y-auto p-4 lg:p-6">
+        <div className="order-1 lg:order-2 w-full lg:w-[400px] xl:w-[480px] shrink-0 lg:overflow-y-auto p-4 sm:p-6 bg-white dark:bg-zinc-950 border-b lg:border-b-0 border-zinc-200 dark:border-zinc-800">
           <QRPreview />
         </div>
       </div>

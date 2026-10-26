@@ -57,12 +57,12 @@ export function QRPreview() {
   return (
     <div
       ref={containerRef}
-      className="sticky top-24 flex flex-col items-center gap-4"
+      className="lg:sticky lg:top-24 flex flex-col items-center gap-4 w-full"
     >
-      <div className="relative rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-4 shadow-sm">
+      <div className="relative rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-3 sm:p-4 shadow-md w-full max-w-[320px]">
         <div
-          className="relative"
-          style={{ width: size, height: size }}
+          className="relative qr-preview-canvas w-full max-w-[280px] mx-auto"
+          style={{ width: size, height: size, maxWidth: "100%" }}
         >
           {loading && (
             <div className="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-zinc-950/80 rounded-lg z-10">

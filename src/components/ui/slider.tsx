@@ -47,7 +47,7 @@ export function Slider({
         style={{ width: `${pct}%` }}
       />
       <div
-        className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-4 w-4 rounded-full bg-white border-2 border-blue-600 dark:border-blue-500 shadow-sm"
+        className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-6 w-6 sm:h-5 sm:w-5 rounded-full bg-white border-2 border-blue-600 dark:border-blue-500 shadow-sm"
         style={{ left: `${pct}%` }}
       />
     </div>

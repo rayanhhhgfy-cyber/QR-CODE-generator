@@ -42,13 +42,41 @@
   scrollbar-color: var(--border) transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: clip;
 }
 
 ::selection {
   background-color: #3b82f6;
   color: white;
 }
+
+/* Rich-but-palette-faithful polish (presentation only) */
+@keyframes qr-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes qr-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.qr-fade-up { animation: qr-fade-up 0.5s ease both; }
+.qr-float { animation: qr-float 5s ease-in-out infinite; }
+
+/* QR preview canvas scales down on narrow phones instead of overflowing */
+.qr-preview-canvas canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Recharts tooltips/charts never force horizontal scroll on small screens */
+.recharts-wrapper { max-width: 100%; }
